@@ -219,10 +219,24 @@ main{
                                         /*Página Reserva*/
 
 
+    .header-reserva {
+    height: 80px;
+    border-bottom: 1px solid #DCDCDC;
+    align-items: center;
+    display: flex;
+
+  }
+
+  .header-reserva img {
+    margin: 50px;
+
+  }
+
   .reserva{ 
     display: flex;
     justify-content: center;
     gap: 90px;
+    margin-bottom: 90px;
   }         
 
   .conteudo-principal {
@@ -238,22 +252,18 @@ main{
     cursor: pointer;
   }
 
-  .header-reserva {
-    height: 60px;
-    border-bottom: 1px solid #A9A9A9;
-    align-items: center;
-    display: flex;
-  }
-
   #logo-reserva {
     width: 100px;
     height: 50px;
     border-radius: 15px;
   }
 
-  #titulo {
-    font-size: 25px;
-    padding: 30px 0 10px 0;
+  .titulo {
+    font-size: 30px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
 
   #subtitulo {
@@ -432,9 +442,17 @@ input, select, textarea, button {
 }
 
 .conteudo-secundario {
-    border: 1px solid #A9A9A9;
+    display: flex;
+    width: 450px;
+    height: 650px;
+    align-items: center;
+}
+
+.cont-sec {
+    width: 100%;
+    border: 1px solid #DCDCDC;
     border-radius: 10px;
-    width: 400px;
+    padding-bottom: 20px;
 }
 
 .anuncio {
@@ -454,23 +472,58 @@ input, select, textarea, button {
    margin-bottom: 10px;
 }
 
-.preco {
+
+.preco, .total {
     padding: 0 20px;
-    border-top: 1px solid #DCDCDC;
-    
+    width: 100%;
 }
 
 .informacoes {
-    width: 300px;
+    width: 100%;
+    border-top: 1px solid #DCDCDC;
 }
 
 #informacoes-preco {
     font-size: 20px;
+    margin-top: 20px;
 }
-
 
 .valores {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
+
+.valores a {
+    color: black;
+}
+
+.total-final {  
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #DCDCDC;
+    margin-top: 20px;
+}
+
+.total-final p {
+    margin-top: 20px;
+}
+
+.rodape-reserva {
+    border-top: 1px solid #DCDCDC;
+    background-color: #f7f7f7;
+    height: 70px;
+}
+
+.rodape-inferior-reserva {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+
+  .rodape-inferior-reserva .items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
