@@ -7,20 +7,19 @@
     <title>Página Reserva</title>
 </head>
 <body>
-
     <div class="header-reserva">
         <img src="/img/logo.png" id="logo-reserva" alt="">
     </div>
+    <p id="titulo">Pedir para reservar</p>
     <div class="reserva">
             <div class="conteudo-principal">
             <div class="conteudo">
-                <p id="titulo">Pedir para reservar</p>
                 <p id="subtitulo">Sua viagem</p>
     
                 <div class="datas-viagem">
                     <div class="datas">
                         <p>Datas</p>
-                        <p>19-29 de ago.</p>
+                        <p>19 - 29 de ago.</p>
                     </div>
                     <div>
                     <a href="#">Editar</a>
@@ -37,19 +36,16 @@
                 </div> 
             </div>
     
-            <div>
-                <p id="subtitulo">Entre ou cadastre-se para reservar</p>
+            <div class="cadastro">
+                <p> Entre ou cadastre-se para reservar </p>
             </div>
         
             <form>
                 <fieldset class="grupo">
-                    <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
                     <div class="campo">
                         <label for="pais"></label>
                         <input type="text" name="pais" id="pais" required placeholder="País/Região" >
                     </div>
-        
-                    <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
                     <div class="campo">
                         <label for="telefone"></label>
                         <input type="number" name="telefone" id="telefone" required placeholder="Número de telefone" >
@@ -58,7 +54,7 @@
                 </fieldset> 
         
                 <!-- Botão para enviar o formulário -->
-                <button class="botao" type="submit" onsubmit="">Concluído</button>            
+                <button class="botao" type="submit" onsubmit="">Continuar</button>            
             </form>
 
             <div class="dividir">ou</div>
@@ -90,7 +86,39 @@
     
         </div>   
         <div class="conteudo-secundario">
-            <p>conteudo secundario</p>
+            <div>
+                <div class="anuncio">
+                    <img src="/img/quarto1.jpg" alt="quarto 1">
+                    <div class="informações-anuncio">
+                        <p>
+                            Apê com vista para o mar e churrasqueira
+                        </p>
+                        <p>
+                            Espaço inteiro: cabana
+                        </p>
+                        <p>
+                            4,98(125 comentários) • Superhost
+                        </p>
+                    </div>
+                </div>
+                <div class="preco">
+                    <div class="informacoes">
+                        <p id="informacoes-preco">Informações de preço</p>
+                        <div class="valores">
+                            <p>R$400,00 x 5 noites</p>
+                            <p> R$2.000,00</p>
+                        </div>
+                        <div class="valores">
+                            <p> <a href="#">Taxa de limpeza</a></p>
+                            <p>R$250,00</p>
+                        </div>
+                        <div class="valores">
+                            <p> <a href="#">Taxa de serviço do Airbnb</a> </p>
+                            <p>R$327,14</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
         </div> 
     </div>

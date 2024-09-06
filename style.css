@@ -221,7 +221,8 @@ main{
 
   .reserva{ 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 90px;
   }         
 
   .conteudo-principal {
@@ -256,8 +257,8 @@ main{
   }
 
   #subtitulo {
-    font-size: 20px;
-    margin: 15px 10px 10px 0;
+    font-size: 23px;
+    margin: 0 10px 10px 0;
   }
 
   .datas-viagem {
@@ -272,6 +273,15 @@ main{
 
   .datas p {
     margin-bottom: 5px;
+  }
+
+  .cadastro {
+    margin: 15px 0;
+  }
+
+  .cadastro p {
+    font-size: 23px;
+    font-weight: 500;
   }
 
   /*Formulario*/
@@ -292,6 +302,16 @@ input, select, textarea, button {
 
 .grupo:after {
     clear: both;
+}
+
+.grupo p {
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.grupo p a{
+    color: black;
+    font-weight: 500;
 }
 
 .campo label {
@@ -411,3 +431,46 @@ input, select, textarea, button {
     height: 24px;
 }
 
+.conteudo-secundario {
+    border: 1px solid #A9A9A9;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.anuncio {
+    display: flex;
+    gap: 13px;
+    width: 100%;
+    padding: 20px;
+}
+
+.anuncio img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.informações-anuncio p {
+   margin-bottom: 10px;
+}
+
+.preco {
+    padding: 0 20px;
+    border-top: 1px solid #DCDCDC;
+    
+}
+
+.informacoes {
+    width: 300px;
+}
+
+#informacoes-preco {
+    font-size: 20px;
+}
+
+
+.valores {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
