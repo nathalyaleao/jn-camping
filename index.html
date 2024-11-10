@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>JN Camping</title>
 </head>
@@ -27,10 +28,12 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                    </svg>
+                    <a href="/perfil-usuario.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                    </a>
                  </div>
             </div>
         </nav> 
@@ -39,25 +42,25 @@
             <form>
                 <div class="item">
                     <label for="destinos">Onde</label>
-                    <input type="text" id="destinos" name="destinos" placeholder="Buscar destinos">
+                    <input type="text" name="destinos" placeholder="Buscar destinos" id="destinos">
                 </div>
 
-                <div class="item">
+                <div class="item-checkin">
                     <label for="checkin">Check-in</label>
-                    <input type="text" id="checkin" name="checkin" placeholder="Insira as datas">
+                    <input type="date" id="checkin" name="checkin" placeholder="Insira as datas" onfocus="dataInicial()" onblur="dataminima()">
                 </div>
 
-                <div class="item">
-                    <label for="checkout">Checkout</label>
-                    <input type="text" id="checkout" name="checkout" placeholder="Insira as datas">
+                <div class="item-checkout">
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" name="checkout" placeholder="Insira as datas" >
                 </div>
 
-                <div class="item">
+                <div class="item-quem">
                     <label for="hospedes">Quem</label>
-                    <input type="text" id="hospedes" name="hospedes" placeholder="Hóspedes?">
+                    <input type="number" id="hospedes" name="hospedes" placeholder="Hóspedes?">
                 </div>
 
-                <button id="botao" type="submit">
+                <button id="botao" type="submit" onclick="buscar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg>
@@ -136,14 +139,37 @@
                     <p>Microcasas</p>
                 </div>
                 <div class="filtro-icones">
-                    <img src="/img/icone12.png" alt="icone">
-                    <p>Mansões</p>
+                    <img src="/img/icone11.png" alt="icone">
+                    <p>Microcasas</p>
                 </div>
                 <div class="filtro-icones">
+                    <img src="/img/icone11.png" alt="icone">
+                    <p>Microcasas</p>
+                </div>
+                <div class="filtro-icones">
+                    <img src="/img/icone11.png" alt="icone">
+                    <p>Microcasas</p>
+                </div>
+                <div class="filtro-icones">
+                    <img src="/img/icone11.png" alt="icone">
+                    <p>Microcasas</p>
+                </div>
+                <div class="filtro-icones">
+                    <img src="/img/icone11.png" alt="icone">
+                    <p>Microcasas</p>
+                </div>
+                <div class="filtro-icones">
+                    <img src="/img/icone11.png" alt="icone">
+                    <p>Microcasas</p>
+                </div>
+                
+
+                <div id="botao-rolagem" class="filtro-icones">
                     <img style="width: 30px; height: 30px;" src="/img/go.png" alt="icone">
                 </div>
             </div>
         </section>
+
         <section class="gallery-container">
             
             <div class="gallery-items">

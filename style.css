@@ -12,6 +12,11 @@
 
 /* Header*/
 
+.navbar-mobile,
+.informacoes-usuario-mobile {
+    display: none;
+}
+
 header {
     border-bottom: 1px solid Gainsboro;
     padding-top: 20px;
@@ -63,6 +68,10 @@ header {
     gap: 10px;
 }
 
+.icones-lateral a {
+    color: black;
+}
+
 /*Formulário de busca*/ 
 
 .busca-site-mobile {
@@ -92,6 +101,13 @@ header {
     margin: 5px;
 }
 
+.item-checkin, .item-checkout, .item-quem {
+    display: inline-grid;
+    flex: 1;
+    min-width: 150px;
+    margin: 5px;
+}
+
 .busca-site form label {
     font-weight: 500;
 }
@@ -101,6 +117,10 @@ header {
     outline: none;
     border: none;
     background: transparent;
+}
+
+#checkin, #checkout, #hospedes {
+    width: 120px;
 }
 
 #botao {
@@ -119,26 +139,30 @@ main {
 }
 
 .filtro {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 40px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    gap: 10px;
 }
 
 .filtro-dentro {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     gap: 20px;
 }
 
 .filtro-icones, .filtro-icones-maiores {
-    cursor: pointer;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
     text-align: center;
-    width: 100px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
 .filtro-icones-maiores {
@@ -153,6 +177,8 @@ main {
 .filtro-icones p {
     font-size: 15px;
 }
+
+
 
 /*Galeria de imagens*/
 
@@ -577,7 +603,7 @@ input, select, textarea, button {
     width: 100%;
     height: 240px;
     background-color: #FFFFFF;
-    box-shadow: 2px 2px 50px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
@@ -592,7 +618,7 @@ input, select, textarea, button {
 .imagem {
     width: 105px;
     height: 105px;
-    background-image: url("img/foto-perfil.png");
+    background-image: url("img/perfil.jpeg");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -674,6 +700,11 @@ input, select, textarea, button {
     margin-bottom: 40px;
 }
 
+.border-divisor {
+    border-top: 1px solid #D8D8D8;
+    padding-top: 30px;
+}
+
 .imagem-depoimento {
     width: 50px;
     height: 50px;
@@ -687,8 +718,6 @@ input, select, textarea, button {
     border-top: 1px solid #D8D8D8;
     height: 300px;
 }
-
-
 
 
                                     /* Media Queries */
@@ -764,7 +793,6 @@ input, select, textarea, button {
         padding: 0;
     }
 
-
     /*Footer*/
     footer {
         border-top: 1px solid #D8D8D8;
@@ -814,130 +842,96 @@ input, select, textarea, button {
         display: none;
     }
 
-}
+    /*Pagina de Usuario*/
 
-
-
-
-
-
-
-
-
-
-    /*
-    .button {
-        margin: 10px 0;
+    
+    .informacoes-usuario,
+    .filtro-lugares .icones,
+    .header-usuario,
+    .infor-lat-dir p, button,
+    #footer-usuario {
+        display: none;
     }
-  
-    .lateral-direita {
+
+    .navbar-mobile {
+        justify-content: space-between;
+        padding: 10px 30px;
+        -webkit-box-align: center !important;
+        background: white !important;
+        display: flex !important;
+        align-items: center !important;
+        height: 64px !important;
+        position: fixed !important;
+        z-index: 1 !important;
+        width: 100%;
+        top: 0;
+    }
+
+    .navbar-mobile a {
+        color: black;
+    }
+
+    .conteudo-pagina-usuario {
         flex-direction: column;
-        align-items: flex-start;
-    }
-  
-    .icones-lateral {
-        border: none;
-        padding: 5px;
-    }
-
-    .item {
-        flex-basis: 100%;
-        margin: 5px 0;
-    }
-  
-    .busca-site {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 600px;
-        margin: 20px auto;
-    }
-
-    .busca-site form {
-        display: flex;
-    }
-
-    .busca-site label {
-        margin-top: 10px;
-    }
-
-    .busca-site input {
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
-
-    .busca-site button {
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-  
-    .filtro {
-        margin: 0 2%;
-    }
-
-    .filtro-dentro {
-        gap: 10px;
-    }
-  
-    .filtro-icones, .filtro-icones-maiores {
-        width: auto;
-    }
-  
-    .gallery-container {
-        padding: 0;
-    }
-  
-    .gallery-items {
         width: 100%;
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-  
-    footer {
-        padding: 20px 0;
+        gap: 1px;
+        margin: 12vh 0 0 0;
     }
 
-    .rodape {
-        margin: 20px 0;
-    }
-
-    .menu-rodape {
-        margin: 20px 0;
-    }
-
-    .menu-rodape div {
-        margin: 20px 0;
-    }
-  } 
-
-@media (max-width: 480px) {
-    .busca-site {
+    .lugares-lat-dir{
+        flex-direction: column;
         width: 100%;
     }
     
-    .filtro {
-        margin: 0 10px;
+
+    .lat-dir {
+        width: 100%;
+    }
+
+    .infor-lat-dir {
+        width: 100%;
+        padding: 30px;
+        border: none;
+    }
+
+    .regiao-lat-dir {
+        margin: 0;
+        padding-bottom: 10vw;
+        border-bottom: 1px solid #D8D8D8;
     }
     
-    .filtro-icones, .filtro-icones-maiores {
-        width: 60px;
+    .depoimentos-lat-dir {
+        padding: 0 30px;
     }
 
-    .filtro-dentro {
-        gap: 5px;
+    .border-divisor {
+        border-top: 1px solid #D8D8D8;
+        padding-top: 10vw;
+    }
+    
+    .caixa-depoimentos {
+        width: 100%;
     }
 
-    .gallery-items {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .lugares-lat-dir {
+        width: 100%;
+        border: none
     }
-}
 
-*/
+    .filtro-lugares {
+        padding: 0 30px;
+        margin: 0;
+    }
+
+    .lat-esq {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .informacoes-usuario-mobile {
+        width: 100%;
+        padding: 0 30px;
+        margin-bottom: 10vw;
+    }
+
+    }
